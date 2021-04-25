@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-image: url("images/photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Dosis', sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+@keyframes animation-move {
+    0% {
+        transform: translate(-60vw,0px);
+        opacity: 1;
+    }
+     100% {
+        transform: translate(0px, 0px);
+    }
+    
+}
+
+@keyframes animation-flying {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(0px, -6px);
+    }
+
+    50% {
+        transform: translate(0px, 6px);
+    }
+    75% {
+        transform: translate(0px, 3px) scale(1.1);
+    }
+}
+
+img {
+    animation: animation-move 5s ease-in-out 0s 1 both,
+    animation-flying 5s ease-in-out 4s infinite none;
+    
+}
+.logo {
+    max-width: 200px;
+    filter: invert();
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.main {
+    color: white;
+    text-align: center;
+    
+}
+
+.main--heading {
+    margin-bottom: 5px;
+}
+
+.button {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(135,111,96);
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+
+    transition: all 5s;
+
+    
+}
+
+.button:hover {
+    background-color: rgb(58, 49, 43);
+    
+}
